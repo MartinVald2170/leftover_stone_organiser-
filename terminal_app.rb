@@ -3,7 +3,7 @@ logged_in = false
 login_password = {
     "Martin" => "don't worry about it",
     "Morgan" => "it's me",
-    "Andy" => "no need to ask"
+    "Andrew" => "no need to ask"
 }
 while !logged_in 
 puts "What is your login?"
@@ -40,14 +40,13 @@ puts "What would you like to do?"
               'delete' - Allows you to delete an item
               'search' - Allows you to search for an item
               'logout' - Allows you to exit the program"
-              puts "What would you like to do?"
-                action = gets.chomp
-    elsif action = "logout" 
+    elsif action == "logout" 
         run_program = false 
+    else puts "you dumb"
+  
 
 
-
-    end  
+    end 
 end 
 
      
