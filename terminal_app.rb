@@ -1,3 +1,4 @@
+run_program = true  
 logged_in = false
 login_password = {
     "Martin" => "don't worry about it",
@@ -31,7 +32,7 @@ end
 #         @location = location 
 #     end 
 # end 
-while true 
+while run_program 
 puts "What would you like to do?"
     action = gets.chomp 
     if action == "help" 
@@ -41,7 +42,9 @@ puts "What would you like to do?"
               'logout' - Allows you to exit the program"
               puts "What would you like to do?"
                 action = gets.chomp
-    elsif action == "logout" 
+    elsif action = "logout" 
+        run_program = false 
+
 
 
     end  
