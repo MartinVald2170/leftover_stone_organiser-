@@ -17,27 +17,28 @@ The target audience for this terminal app is for large scale stone companies whe
 * Deleting stone from the stock when it is used for a job
 * Log out   
 
-Login/Password 
+*Login/Password*
 
 This feature will allow access to limited people within the company so the stock database can't be used by someone without permission 
 
-Classification 
+*Classification* 
 
 Stone will be placed within a class and it is possible to add classifications of other things in the future such as tiles. 
 
-Adding Stone with Values (Type, Colour,Batch Number )
+*Adding Stone with Values (Type, Colour,Batch Number)*
 
 This feature will allow the users to add leftover stock to the database with values of their type, colour and batch number for searchable ease. Stone can be added at anytime after logging in 
 
-Searching 
+*Searching* 
 
 You will be able to search the data base of added leftover stock for a certain colour, a certain type of stone and a certain batch number depending on what you need. 
 
-Delete from Database 
+*Delete from Database* 
 
 When a leftover stock is used it can be deleted from the database easily 
 
-Log Out 
+*Log Out*  
+
 A log out command will take you back to the sign in phase when you are done with the program 
 
 
