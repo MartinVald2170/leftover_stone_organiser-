@@ -10,4 +10,10 @@ In the current state picking out left over stock to be used for jobs is done man
 The target audience for this terminal app is for large scale stone companies where it is difficult to quickly pull up the information they need about leftover stock from memory. This will allow anyone to be able to access this catalog of information. For example the person organising jobs with possible clients can search up if the stone the client is interested in can be supplied from the leftover stock making it a more profitable sell rather than having to order more stock from overseas costing the company more money.
 
 # The Features 
+* Login/Password 
+* Classification of Left Over Stock 
+* Adding Stone Stock with the values of the type of stone it is, the colour and the batch number 
+* Searching the catalog for batch number, colour and type of stone it is and returning a true or false or information 
+* Deleting stone from the stock when used for a job
+* Log out   
 
