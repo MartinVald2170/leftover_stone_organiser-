@@ -17,3 +17,5 @@ The target audience for this terminal app is for large scale stone companies whe
 * Deleting stone from the stock when used for a job
 * Log out   
 
+Login/Password : 
+
