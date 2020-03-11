@@ -1,27 +1,27 @@
 run_program = true  
 logged_in = false
-# login_password = {
-#     "Martin" => "don't worry about it",
-#     "Morgan" => "it's me I promise",
-#     "Andrew" => "no need to ask"
-# }
-# while !logged_in 
-# puts "What is your login?"
-# login = gets.chomp 
-# if login_password.has_key?(login)
-#     puts "What is your password?"
+login_password = {
+    "Martin" => "don't worry about it",
+    "Morgan" => "it's me I promise",
+    "Andrew" => "no need to ask"
+}
+while !logged_in 
+puts "What is your login?"
+login = gets.chomp 
+if login_password.has_key?(login)
+    puts "What is your password?"
 
    
-#     password = gets.chomp
-# if login_password[login] == password 
-#     puts "welcome"
-#     logged_in = true  
-# else 
-#     puts "WHO ARE YOU"
+    password = gets.chomp
+if login_password[login] == password 
+    puts "welcome"
+    logged_in = true  
+else 
+    puts "WHO ARE YOU"
 
-#     end 
-# end 
-# end  
+    end 
+end 
+end  
 
 class LeftoverStone 
     @@array = Array.new
