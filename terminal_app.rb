@@ -24,32 +24,36 @@ logged_in = false
 # end  
 
 class LeftoverStone 
-    attr_accessor :type , :colour , :batch_number, :location, :action
-    def initialize(type, colour, batch_number, location)
+    @@array = Array.new
+    attr_accessor :name, :type , :colour , :batch_number, :location, :action
+    def self.all_instances
+        @@array
+    end 
+    def initialize(name, type, colour, batch_number, location)
+        @name = name
         @type = type 
         @colour = colour 
         @batch_number = batch_number
         @location = location 
+        @@array << self 
     end 
 end 
 
 def get_action_word()
 
     puts "What would you like to do?
-    Enter help for manual"
+Enter help for manual"
     @action = gets.chomp 
 
     end 
 while run_program 
- 
-get_action_word()
 
     if @action == "help" 
     
-        puts "              'add' -    Allows you to add a new item
-              'delete' - Allows you to delete an item
-              'search' - Allows you to search for an item
-              'logout' - Allows you to exit the program"
+        puts "'add' -    Allows you to add a new item
+'list' -   Allows you to list all avaliable items
+'search' - Allows you to search for an item
+'logout' - Allows you to exit the program"
 
     elsif @action == "add"
         def get_word(prompt_text)
@@ -59,7 +63,7 @@ get_action_word()
         name = get_word("Please enter name to label the leftover stock")
         type = get_word("Please enter type of material")
         colour = get_word("Please enter colour")
-        batch_number = get_word("Please enter batch number")
+        batch_number = get_word("Please enter batch number, enter nil if NA")
         location = get_word("Please enter bay location")
 
 
@@ -71,10 +75,18 @@ get_action_word()
 # batch_number = gets.chomp 
 # location = gets.chomp 
 
-    name=LeftoverStone.new(type, colour, batch_number, location)
+    LeftoverStone.new(name, type, colour, batch_number, location)
     puts "Stone #{name} has been added"
 
-    @action == "search"
+    elsif 
+
+    # @action == "search"
+    @action == "list"
+    puts "Here is a list of what is stored"
+     p LeftoverStone.all_instances
+
+
+
 
     
 
@@ -87,11 +99,13 @@ get_action_word()
 
     elsif @action == "logout" 
         run_program = false 
-    else puts "you dumb"
+
   
-get_action_word() 
+
 
     end 
+    
+    get_action_word() 
 
 
     #method goes here to look for another action word
