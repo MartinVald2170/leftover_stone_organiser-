@@ -14,7 +14,7 @@ The target audience for this terminal app is for large scale stone companies whe
 * Classification of left over stock 
 * Adding Stone Stock with the values of the type of stone it is, the colour, the batch number and location
 * Searching the catalog for batch number, colour, type of stone and location. Returning a true/false or information 
-* Deleting stone from the stock when it is used for a job
+* Listing all stones that have been added and their attributes 
 * Log out   
 
 *Login/Password*
@@ -33,9 +33,9 @@ This feature will allow the users to add leftover stock to the database with val
 
 You will be able to search the data base of added leftover stock for a certain colour, a certain type of stone and a certain batch number depending on what you need. 
 
-*Delete from Database* 
+*List Array* 
 
-When a leftover stock is used it can be deleted from the database easily 
+Listing the objects that have been added and their value
 
 *Log Out*  
 
