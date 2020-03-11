@@ -1,30 +1,30 @@
 run_program = true  
 logged_in = false
-login_password = {
-    "Martin" => "don't worry about it",
-    "Morgan" => "it's me I promise",
-    "Andrew" => "no need to ask"
-}
-while !logged_in 
-puts "What is your login?"
-login = gets.chomp 
-if login_password.has_key?(login)
-    puts "What is your password?"
+# login_password = {
+#     "Martin" => "don't worry about it",
+#     "Morgan" => "it's me I promise",
+#     "Andrew" => "no need to ask"
+# }
+# while !logged_in 
+# puts "What is your login?"
+# login = gets.chomp 
+# if login_password.has_key?(login)
+#     puts "What is your password?"
 
    
-    password = gets.chomp
-if login_password[login] == password 
-    puts "welcome"
-    logged_in = true  
-else 
-    puts "WHO ARE YOU"
+#     password = gets.chomp
+# if login_password[login] == password 
+#     puts "welcome"
+#     logged_in = true  
+# else 
+#     puts "WHO ARE YOU"
 
-    end 
-end 
-end  
+#     end 
+# end 
+# end  
 
 class LeftoverStone 
-    attr_accessor :type , :colour , :batch_number, :location
+    attr_accessor :type , :colour , :batch_number, :location, :action
     def initialize(type, colour, batch_number, location)
         @type = type 
         @colour = colour 
@@ -32,17 +32,26 @@ class LeftoverStone
         @location = location 
     end 
 end 
+
+def get_action_word()
+
+    puts "What would you like to do?
+    Enter help for manual"
+    @action = gets.chomp 
+
+    end 
 while run_program 
-puts "What would you like to do?
-Enter help for manual"
-    action = gets.chomp 
-    if action == "help" 
+ 
+get_action_word()
+
+    if @action == "help" 
+    
         puts "              'add' -    Allows you to add a new item
               'delete' - Allows you to delete an item
               'search' - Allows you to search for an item
               'logout' - Allows you to exit the program"
 
-    elsif action == "add"
+    elsif @action == "add"
         def get_word(prompt_text)
             p prompt_text
             return gets.chomp.downcase
@@ -64,6 +73,9 @@ Enter help for manual"
 
     name=LeftoverStone.new(type, colour, batch_number, location)
     puts "Stone #{name} has been added"
+
+    @action == "search"
+
     
 
 
@@ -73,13 +85,16 @@ Enter help for manual"
 
 
 
-    elsif action == "logout" 
+    elsif @action == "logout" 
         run_program = false 
     else puts "you dumb"
   
-
+get_action_word() 
 
     end 
+
+
+    #method goes here to look for another action word
 end 
 
      
