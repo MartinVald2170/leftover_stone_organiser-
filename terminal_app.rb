@@ -1,27 +1,29 @@
 run_program = true  
 logged_in = false
-# login_password = {
-#     "Martin" => "don't worry about it",
-#     "Morgan" => "it's me I promise",
-#     "Andrew" => "no need to ask"
-# }
-# while !logged_in 
-# puts "What is your login?"
-# login = gets.chomp 
-# if login_password.has_key?(login)
-#     puts "What is your password?"
+login_password = {
+    "Martin" => "password",
+    "Morgan" => "1234567890",
+    "Andrew" => "iforget"
+}
+while !logged_in 
+puts "What is your login?
+(Case Sensitive)"
+login = gets.chomp 
+if login_password.has_key?(login)
+    puts "What is your password?
+(Case Sensitive)"
 
    
-#     password = gets.chomp
-# if login_password[login] == password 
-#     puts "welcome"
-#     logged_in = true  
-# else 
-#     puts "WHO ARE YOU"
+    password = gets.chomp
+if login_password[login] == password 
+    puts "Welcome #{login}"
+    logged_in = true  
+else 
+    puts "Login or Password was incorrect please try again"
 
-#     end 
-# end 
-# end  
+    end 
+end 
+end  
 
 class LeftoverStone 
     @@array = Array.new
@@ -42,7 +44,7 @@ end
 def get_action_word()
 
     puts "What would you like to do?
-Enter help for manual"
+Enter help for a program manual"
     @action = gets.chomp.downcase.delete_suffix(" ") 
 
  end 
@@ -60,20 +62,12 @@ while run_program
             p prompt_text
             return gets.chomp.downcase.delete_suffix(" ")
         end 
-        name = get_word("Please enter name to label the leftover stock, press enter if not applicable")
+        name = get_word("Please enter a name to label the leftover stock, press enter if not applicable")
         type = get_word("Please enter type of material, press enter if not applicable")
         colour = get_word("Please enter colour, press enter if not applicable")
         batch_number = get_word("Please enter batch number, press enter if not applicable")
         location = get_word("Please enter location, press enter if not applicable")
 
-
-        #        puts "Please type the name, type, colour, batch number and location?" 
-        
-# name = gets.chomp
-# type = gets.chomp
-# colour = gets.chomp
-# batch_number = gets.chomp 
-# location = gets.chomp 
 
     LeftoverStone.new(name, type, colour, batch_number, location)
     puts "Leftover stock you labelled as #{name} has been added"
@@ -81,58 +75,21 @@ while run_program
     elsif 
 
     @action == "search"
-    puts "Enter a name to search"
+    puts "Enter a name of an object you would like to know about"
     search_term = gets.chomp.downcase
     matching_items = LeftoverStone.all_instances.select {|item| item.name.match(search_term)}
     p matching_items
 
-#     def search_array_for_input 
-#         entered_input2 = gets.chomp
-#     p LeftoverStone.has_key?(entered_input2)
-# end 
-# entered_input = gets.chomp
-#     while entered_input == "colour"
-#         puts "What colour would you like to search"
-
-# search_array_for_input 
-
-# while entered_input == "batch number"
-#     puts "What batch number would you like to search" 
-#     search_array_for_input 
-# while entered_input == "name"
-#    puts "What name would you like to search?"
-#    search_array_for_input  
-
-#     # str = gets.chomp
-# #    return LeftoverStone.has_key?(str)
-
-
-#             # p LeftoverStone object_colour 
-
-# # LeftoverStone.key()
-
-
-#     puts "it does the search action nice"
-
     elsif 
     @action == "list"
-    puts "Here is a list of what is stored"
+    puts "Here is a master list of what is currently stored"
      p LeftoverStone.all_instances
 
 
-
-
-    
-
-
-
-
-
-
-
-
+ 
     elsif @action == "logout" 
         run_program = false 
+        abort("Have a nice day #{login}!")
 
   
 
@@ -142,7 +99,9 @@ while run_program
     get_action_word() 
 
 
-#     #method goes here to look for another action word
+    #method goes here to look for another action word
 end 
+# require 'colorize'
+# puts "This is blue".colorize(:blue)
 
      

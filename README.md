@@ -1,9 +1,13 @@
 # Software Development Plan 
 
+
+*Github Link*
+https://github.com/MartinVald2170/leftover_stone_organiser- 
+
 The application I am designing will solve the issue of disorganised leftover stock from used slabs of stone within the work flow of a large scale stone company. It will allow the authorised user to add stock kept after being used for a job with the values of the name, type, colour, batch number and location.
 # The Problem
 
-In the current state, within the stone industry, picking out leftover stock to be used for jobs is done manually and by memory. To relieve stress from the workers and to save time, this app will allow you to caterogrize the stock. This will be done by labelling it with the type of stone it is, the colour of the stone and the specific batch number if you need the exact replica to replace another job.  
+In the current state, within the stone industry, picking out leftover stock to be used for jobs is done manually and by memory which can be a very dangerous job. What if we can get the location of the stone we want without having to move large unstable slabs which can fall on a worker. To relieve stress from the workers and to save time, this app will allow you to caterogrize the stock as it is being placed in the yard. This will be done by labelling it with the type of stone it is, the colour of the stone, the specific batch number if you need the exact replica to replace another job and the location.  
 
 # Target Audience 
 
