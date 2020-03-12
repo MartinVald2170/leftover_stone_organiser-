@@ -25,7 +25,7 @@ logged_in = false
 
 class LeftoverStone 
     @@array = Array.new
-    attr_accessor :name, :type , :colour , :batch_number, :location, :action
+    attr_accessor :name, :type , :colour, :batch_number, :location, :action
     def self.all_instances
         @@array
     end 
@@ -83,7 +83,7 @@ while run_program
     @action == "search"
     puts "Enter a name to search"
     search_term = gets.chomp.downcase
-    matching_items = Array.select({item|item.name.include?(search_term)})
+    matching_items = LeftoverStone.all_instances.select {|item| item.name.match(search_term)}
     p matching_items
 
 #     def search_array_for_input 
