@@ -1,3 +1,4 @@
+require 'colorize'
 run_program = true  
 logged_in = false
 login_password = {
@@ -7,19 +8,19 @@ login_password = {
 }
 while !logged_in 
 puts "What is your login?
-(Case Sensitive)"
+(Case Sensitive)".colorize(:light_blue)
 login = gets.chomp 
 if login_password.has_key?(login)
     puts "What is your password?
-(Case Sensitive)"
+(Case Sensitive)".colorize(:light_blue)
 
    
     password = gets.chomp
 if login_password[login] == password 
-    puts "Welcome #{login}"
+    puts "Welcome #{login}".colorize(:light_blue)
     logged_in = true  
 else 
-    puts "Login or Password was incorrect please try again"
+    puts "Login or Password was incorrect please try again".colorize(:light_blue)
 
     end 
 end 
@@ -44,7 +45,7 @@ end
 def get_action_word()
 
     puts "What would you like to do?
-Enter help for a program manual"
+Enter help for a program manual".colorize(:light_blue)
     @action = gets.chomp.downcase.delete_suffix(" ") 
 
  end 
@@ -55,7 +56,7 @@ while run_program
         puts "'add' -    Allows you to add a new item
 'list' -   Allows you to list all avaliable items
 'search' - Allows you to search for an item
-'logout' - Allows you to exit the program"
+'logout' - Allows you to exit the program".colorize(:light_blue)
 
     elsif @action == "add"
         def get_word(prompt_text)
@@ -70,26 +71,26 @@ while run_program
 
 
     LeftoverStone.new(name, type, colour, batch_number, location)
-    puts "Leftover stock you labelled as #{name} has been added"
+    puts "Leftover stock you labelled as #{name} has been added".colorize(:light_blue)
 
     elsif 
 
     @action == "search"
-    puts "Enter a name of an object you would like to know about"
+    puts "Enter a name of an object you would like to know about".colorize(:light_blue)
     search_term = gets.chomp.downcase
     matching_items = LeftoverStone.all_instances.select {|item| item.name.match(search_term)}
     p matching_items
 
     elsif 
     @action == "list"
-    puts "Here is a master list of what is currently stored"
+    puts "Here is a master list of what is currently stored".colorize(:light_blue)
      p LeftoverStone.all_instances
 
 
  
     elsif @action == "logout" 
         run_program = false 
-        abort("Have a nice day #{login}!")
+        abort("Have a nice day #{login}!".colorize(:light_blue))
 
   
 
@@ -101,7 +102,8 @@ while run_program
 
     #method goes here to look for another action word
 end 
-# require 'colorize'
-# puts "This is blue".colorize(:blue)
+
+
+
 
      
