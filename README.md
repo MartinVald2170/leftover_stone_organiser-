@@ -53,3 +53,31 @@ A log out command will be entered by the user and end the program
 
 
 
+# Outline of the User Interaction
+
+Program starts and asks for a username. When the username is entered it asks for a password 
+if either is wrong it will ask again until they are both correct. When the password is wrong it will let you know the password was incorrect 
+
+Once logged in it will ask you what you want to do and how to access the help manual 
+When the user types help it will print out a program manuel describing the actions they can activate and a description of each. If an unaccepted keyword is used it will ask again until an action word is used 
+
+When the user inputs "add" it will cylce through and  prompt them to type in a name, type of stone, batch number and location. They can press enter to leave it blank if the information is unavailable and when it finishes asking it will comfirm that the information has been stored and asks if they would like to do anything
+
+When user inputs list it will list out a list and a sentence saying this is the master list. If there is nothing stored in the system it will return a blank box and ask what they want to do
+
+If the user uses "search" they will be asked to search a name of the stone they would like to search for. This will print out the information on that object then ask what they would like to do. When there is no match it will print out an empty box and ask what they want to do
+
+when the user inputs logout the program ends and tells the user to have a nice day 
+
+
+# Help Documentation
+
+1. Install Ruby on your laptop 
+2. Run Ubuntu 18.04 
+3. Download project file to user directory 
+4. Go to specified Directory using Ubuntu 
+5. Run the rb file in Ubuntu 18.04 LTS and Ruby 2.6.3 
+
+
+
+

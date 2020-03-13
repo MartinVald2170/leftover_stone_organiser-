@@ -1,4 +1,5 @@
 require 'colorize'
+
 run_program = true  
 logged_in = false
 login_password = {
@@ -20,7 +21,7 @@ if login_password[login] == password
     puts "Welcome #{login}".colorize(:light_blue)
     logged_in = true  
 else 
-    puts "Login or Password was incorrect please try again".colorize(:light_blue)
+    puts "Password was incorrect please try again".colorize(:light_blue)
 
     end 
 end 
